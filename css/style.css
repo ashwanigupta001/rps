@@ -418,6 +418,31 @@ a:focus {
 
 /* end call section */
 
+/* map section  */
+/* .map-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 280px;
+  }
+} */
+
+#schoolMap {
+  width: 100%;
+  height: 420px;
+}
+
+@media (max-width: 768px) {
+  #schoolMap {
+    height: 300px;
+  }
+}
+/* end map section  */
+
 /* footer section*/
 
 .footer_section {
