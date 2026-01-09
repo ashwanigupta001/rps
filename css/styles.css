@@ -264,9 +264,6 @@ a:focus {
 .vehicle_section .carousel-control-next-icon {
   background-image: url(../images/next.png);
 }
-
-
-
 /* end vehicle section */
 
 /* client section */
@@ -307,12 +304,7 @@ a:focus {
 .client_detail .client_img-box img {
   width: 100%;
 }
-
-
-
-
 /* end client section */
-
 
 /* contact section */
 .contact_section {
@@ -357,8 +349,6 @@ a:focus {
 /* end contact section */
 
 /* admission section */
-
-
 .admission_section .container-fluid.position-relative {
   height: 500px;
 }
@@ -418,19 +408,7 @@ a:focus {
 
 /* end call section */
 
-/* map section  */
-/* .map-container {
-  position: relative;
-  width: 100%;
-  height: 400px;
-}
-
-@media (max-width: 768px) {
-  .map-container {
-    height: 280px;
-  }
-} */
-
+/* map section */
 #schoolMap {
   width: 100%;
   height: 420px;
@@ -462,3 +440,18 @@ a:focus {
 }
 
 /* end footer section*/
+
+/* notice section   */
+.notice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.notice-table td {
+  text-align: center;
+  border: 1px solid #000;
+  padding: 8px;
+}
+.notice-table a {
+  display: inline-block;
+}
+/* end notice section   */
