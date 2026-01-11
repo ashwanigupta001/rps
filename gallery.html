@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- favicon  -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.jpeg">
+  <title>Rama Public School</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+  <!-- progress barstle -->
+  <link rel="stylesheet" href="assets/css/css-circular-prog-bar.css">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link href="assets/css/styles.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="assets/css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/css-circular-prog-bar.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+</head>
+
+<body>
+    <!-- header section strats -->
+    <div class="top_container sub_pages">    
+        <header class="header_section">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/images/rps_logo.jpeg" alt="">
+                        <span>
+                        Rama Public School
+                        </span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="about.html"> About </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="notice.html"> Notices </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="vehicle.html"> Vehicle </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="gallery.html"> Gallery </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                            </form>
+                        </div>                        
+                    </div>                    
+                </nav>
+                <header class="page-header">
+                    <h1>📸 School Gallery</h1>
+                    <p>Moments that define excellence</p>
+                </header>                
+            </div>
+        </header>
+    </div>
+    <!-- end header section -->
+
+    <!-- gallery section  -->
+    <section class="gallery-container">
+    <div class="gallery-item">
+        <img src="assets/images/gallery/campus.jpeg" alt="School Campus">
+        <div class="overlay">School Campus</div>
+    </div>
+    <div class="gallery-item">
+        <img src="assets/images/gallery/annual-function.jpeg" alt="Annual Function">
+        <div class="overlay">Annual Function</div>
+    </div>
+    <div class="gallery-item">
+        <img src="assets/images/gallery/trip.jpeg" alt="Sports Day">
+        <div class="overlay">School trip</div>
+    </div>
+    <div class="gallery-item">
+        <img src="assets/images/gallery/drawing.jpeg" alt="Drawing competition">
+        <div class="overlay">Drawing competition</div>
+    </div>
+    </section>
+    <!-- gallery section end -->
+
+    <!-- moving gallery section  -->
+    <section class="moving-gallery">
+        <div class="gallery-track" id="galleryTrack">
+            <script>   
+                const track = document.getElementById("galleryTrack");  
+                // image count starts from g1 to g44. Increase the count if new images are added
+                // newly added images should be named as g45 g46 and so on...
+                for (let i = 1; i <= 44; i++) {
+                  const img = document.createElement("img");
+                  img.src = "assets/images/gallery/g"+i+".jpeg";
+                  img.alt = "g"+i+".jpeg";
+                  track.appendChild(img);
+                }
+              </script>      
+        </div>
+      </section>
+      <!-- moving gallery section end -->
+
+    <!-- Lightbox markup-->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        
+        <button class="lightbox-nav prev" id="lightboxPrev">&#10094;</button>
+        <img id="lightboxImg" src="" alt="Gallery Image">
+        <button class="lightbox-nav next" id="lightboxNext">&#10095;</button>
+    </div>
+    <!-- Lightbox markup end -->
+
+    <!-- footer section -->
+        <section class="container-fluid footer_section">
+            <p>
+            Copyright &copy; 2026 All Rights Reserved By Rama Public School
+            </p>
+        </section>
+    <!-- footer section end-->
+
+    <!-- lightbox js -->
+    <script>
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightboxImg");
+        const closeBtn = document.getElementById("lightboxClose");
+        const prevBtn = document.getElementById("lightboxPrev");
+        const nextBtn = document.getElementById("lightboxNext");
+
+        // Collect all gallery images
+        let galleryImages = [];
+        let currentIndex = 0;
+
+        function collectImages() {
+            galleryImages = Array.from(
+            document.querySelectorAll(
+                ".gallery-container img, .gallery-track img"
+            )
+            );
+        }
+
+        collectImages();
+
+        function openLightbox(index) {
+            currentIndex = index;
+            lightboxImg.src = galleryImages[currentIndex].src;
+            lightbox.classList.add("active");
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            openLightbox(currentIndex);
+        }
+
+        function showPrev() {
+            currentIndex =
+            (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            openLightbox(currentIndex);
+        }
+
+        // Open on image click
+        document.addEventListener("click", (e) => {
+            const img = e.target;
+
+            if (
+            img.tagName === "IMG" &&
+            (img.closest(".gallery-container") ||
+            img.closest(".gallery-track"))
+            ) {
+            collectImages(); // ensure dynamic images included
+            const index = galleryImages.indexOf(img);
+            openLightbox(index);
+            }
+        });
+
+        // Navigation
+        nextBtn.addEventListener("click", showNext);
+        prevBtn.addEventListener("click", showPrev);
+
+        // Close
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+            lightbox.classList.remove("active");
+            }
+        });
+
+        // Keyboard support
+        document.addEventListener("keydown", (e) => {
+            if (!lightbox.classList.contains("active")) return;
+
+            if (e.key === "ArrowRight") showNext();
+            if (e.key === "ArrowLeft") showPrev();
+            if (e.key === "Escape") lightbox.classList.remove("active");
+        });
+        lightbox.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightbox.addEventListener("touchend", (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeDistance = touchEndX - touchStartX;
+            // Minimum swipe distance threshold
+            if (Math.abs(swipeDistance) < 50) return;
+            if (swipeDistance < 0) {
+                showNext(); // swipe left
+            } else {
+                showPrev(); // swipe right
+            }
+        }
+
+    </script>       
+    <!-- lightbox js end -->
+      
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+</body>
+</html>
