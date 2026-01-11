@@ -96,7 +96,7 @@ body {
     display: flex;
     gap: 1rem;
     width: max-content;
-    animation: scrollGallery 30s linear infinite;
+    animation: scrollGallery 80s linear infinite;
 }
 
 .gallery-track img {
