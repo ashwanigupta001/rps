@@ -455,3 +455,15 @@ a:focus {
   display: inline-block;
 }
 /* end notice section   */
+
+
+/* Align menu to the right */
+/* Align menu to the right */
+.header_section .navbar-collapse {
+  flex-grow: 1 !important;
+}
+
+.header_section .navbar-nav {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}

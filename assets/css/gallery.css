@@ -277,3 +277,10 @@ body {
   z-index: 10;
   position: relative;
 }
+
+.gallery-heading {
+  text-align: center;
+  margin-top: -130px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
