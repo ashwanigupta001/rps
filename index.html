@@ -12,9 +12,7 @@
   <meta name="author" content="" />
   <title>Rama Public School</title>
   <!-- favicon  -->
-  <link rel="icon" type="image/png" href="assets/images/favicon.jpeg">
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.jpeg">  
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
   <!-- font wesome stylesheet -->
@@ -29,10 +27,21 @@
   </script>  
 
   <!-- load menu section starts -->
-  <script type="module">
-    const response = await fetch("menu-options.html");
-    const html = await response.text();          
-    document.querySelector("#menu").innerHTML = html;
+  <script>
+
+    fetch("menu-options.html")
+      .then(response => response.text())
+      .then(menu => {
+  
+        document.getElementById("menu").innerHTML = menu;
+  
+      })
+      .catch(error => {
+  
+        console.error("Error loading menu:", error);
+  
+      });
+  
   </script>
   <!-- load menu section ends -->
 </head>
@@ -55,7 +64,9 @@
           </button>
 
           <!-- menu section starts -->
-          <div id="menu" class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">        
+            <div id="menu"></div>        
+          </div>
           <!-- menu section ends -->
 
         </nav>
@@ -290,6 +301,8 @@
   </section>
   <!-- footer section end-->
 
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
   <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 </body>
