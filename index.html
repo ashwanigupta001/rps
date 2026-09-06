@@ -28,20 +28,19 @@
 
   <!-- load menu section starts -->
   <script>
-
-    fetch("menu-options.html")
-      .then(response => response.text())
+    fetch("./menu-options.html")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text();
+      })
       .then(menu => {
-  
         document.getElementById("menu").innerHTML = menu;
-  
       })
       .catch(error => {
-  
         console.error("Error loading menu:", error);
-  
-      });
-  
+      });  
   </script>
   <!-- load menu section ends -->
 </head>
@@ -144,15 +143,31 @@
           <tr>
             <td>
               <a href="notice.html">
-                1. Notice for PTA : Parents selected through draw of lots                
+                1. Approved Fee structure for sessions 2026-27, 2027-28 & 2028-29     
               </a>
             </td>
-            <td><time datetime="2026-01-01"> Date : 13 July 2026</time></td>
+            <td><time datetime="2026-01-01"> Date : 2 Sep 2026</time></td>
           </tr>
           <tr>
             <td>
               <a href="notice.html">
-                2. Notice for PTA : Draw lot for formation of SLFRC
+                2. Fee Structure details for sessions 2026-27, 2027-28 & 2028-29             
+              </a>
+            </td>
+            <td><time datetime="2026-01-01"> Date : 2 Sep 2026</time></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="notice.html">
+                3. Notice for PTA : Parents selected through draw of lots
+              </a>
+            </td>
+            <td><time datetime="2026-01-08"> Date : 13 July 2026</time></td>
+          </tr>          
+          <tr>
+            <td>
+              <a href="notice.html">
+                4. Notice for PTA : Draw lot for formation of SLFRC
               </a>
             </td>
             <td><time datetime="2026-01-08"> Date : 8 July 2026</time></td>

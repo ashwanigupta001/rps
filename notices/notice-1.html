@@ -1,370 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLFRC – 2026-27 Members List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <title>School Notice - Rama Public School</title>
 
-        body {
-            margin: 0;
-            padding: 30px 15px;
-            background: #f4f6f8;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #222;
-        }
+  <!-- Hindi Font Support -->
+  <link rel="stylesheet" href="../css/styles.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            background: #ffffff;
-            padding: 35px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        h1 {
-            text-align: center;
-            color: #1f4e79;
-            margin-bottom: 30px;
-            font-size: 28px;
-        }
+    body {
+      margin: 0;
+      padding: 40px 15px;
+      background: #f4f6f8;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      line-height: 1.8;
+    }
 
-        .intro {
-            font-size: 16px;
-            line-height: 1.7;
-            text-align: justify;
-            margin-bottom: 25px;
-        }
+    .notice-container {
+      max-width: 950px;
+      margin: auto;
+      background: #ffffff;
+      padding: 45px 55px;
+      border: 1px solid #ddd;
+      border-top: 8px solid #8b0000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
 
-        .section-title {
-            background: #1f4e79;
-            color: #fff;
-            padding: 12px 15px;
-            font-size: 20px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-        }
+    /* Notice Header */
+    .notice-label {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #8b0000;
+      margin-bottom: 8px;
+    }
 
-        .table-wrapper {
-            overflow-x: auto;
-        }
+    .notice-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #222;
+      line-height: 1.5;
+      margin: 0 auto 30px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 25px;
-            min-width: 700px;
-        }
+    .notice-content {
+      font-size: 16px;
+      text-align: justify;
+    }
 
-        th,
-        td {
-            border: 1px solid #999;
-            padding: 10px 8px;
-            text-align: left;
-            vertical-align: top;
-            font-size: 14px;
-        }
+    .notice-content p {
+      margin-bottom: 18px;
+    }
 
-        th {
-            background: #d9eaf7;
-            color: #1f1f1f;
-            font-weight: bold;
-            text-align: center;
-        }
+    .salutation {
+      font-weight: 600;
+    }
 
-        td:first-child {
-            text-align: center;
-            width: 70px;
-        }
+    .signature {
+      margin-top: 35px;
+      font-weight: 600;
+      line-height: 1.6;
+    }
 
-        .sub-note {
-            font-weight: bold;
-            margin: 15px 0 10px;
-            color: #333;
-        }
+    /* Divider Between English and Hindi */
+    .language-divider {
+      border: none;
+      border-top: 2px solid #8b0000;
+      margin: 45px 0;
+    }
 
-        @media print {
-            body {
-                background: #fff;
-                padding: 0;
-            }
+    /* Hindi Section */
+    .hindi-section {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
 
-            .container {
-                box-shadow: none;
-                max-width: 100%;
-                padding: 15px;
-            }
+    .hindi-section .notice-label {
+      letter-spacing: 1px;
+    }
 
-            .section-title {
-                color: #000;
-                background: #d9eaf7;
-            }
-        }
+    .hindi-content {
+      font-size: 16px;
+      text-align: justify;
+      line-height: 2;
+    }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px 12px;
-            }
+    .hindi-content p {
+      margin-bottom: 18px;
+    }
 
-            h1 {
-                font-size: 22px;
-            }
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
 
-            .intro {
-                font-size: 14px;
-            }
+      .notice-container {
+        padding: 30px 22px;
+      }
 
-            .section-title {
-                font-size: 17px;
-            }
-        }
-    </style>
+      .notice-label {
+        font-size: 22px;
+      }
+
+      .notice-title {
+        font-size: 18px;
+      }
+
+      .notice-content,
+      .hindi-content {
+        font-size: 15px;
+        text-align: left;
+      }
+    }
+
+    /* Print Styling */
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+
+      .notice-container {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        border-top: 6px solid #8b0000;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 
-<body>
-    <div class="notice-item">
-        <h3>📢 1. Notice for PTA : Parents selected through draw of lots</h3>
-        <p class="notice-date">Date: 13 July 2026</p>
+<body>  
+
+  <div class="notice-container">
+
+    <!-- ENGLISH NOTICE -->
+
+    <div class="notice-label">
+      NOTICE
+    </div>
+
+    <div class="notice-title">
+      Approved Fee structure for sessions 2026-27, 2027-28 & 2028-29
+    </div>
+
+    <div class="notice-content">
+
+      <p class="salutation">
+        Dear Parents,
+      </p>
+
+      <p>
+        This is to inform all parents that the School Level Fee Regulation Committee (SLFRC) for the year 2026-27 has duly approved the fee structure of the school for three academic sessions, i.e. 2026-27, 2027-28 and 2028-29.
+      </p>
+
+      <p>
+        There is no increase in the school fee for the academic session 2026-27. The fee structure applicable for the session 2025-26 shall continue for 2026-27.
+      </p>
+
+      <p>
+        The fee structure for the academic sessions 2027-28 and 2028-29 has also been duly approved by the SLFRC.
+      </p>
+
+      <p>
+        From the academic session 2027-28, Sports Fee is being introduced as part of the approved fee structure.
+      </p>
+
+      <p>
+        From the academic session 2027-28, the existing “Smart Class Fee” has been restructured as “Smart Class &amp; Computer Fee” to meet the expenses related to smart-class facilities and computer education.
+      </p>
+
+      <p>
+        The detailed approved fee structure for the sessions 2027-28 and 2028-29 is attached herewith for the information of all parents.
+      </p>
+
+      <p>
+        Parents are requested to kindly take note of the approved fee structure.
+      </p>
+
+      <div class="signature">
+        Principal<br>
+        Rama Public School
       </div>
-    <div class="container">
-
-        <h1>SLFRC – 2026-27 Members List</h1>
-
-        <div class="intro">
-            All Parents are informed that School Level Fee Regulating Committee
-            (SLFRC) for session 2026-27 has been constituted through Draw of lots
-            in PTA Meeting held on dated <strong>13th July 2026</strong> in the
-            presence of Observer <strong>Mrs. Payal Jain</strong>. The members of
-            the committee are as follows:-
-        </div>
-
-        <div class="section-title">
-            Parents Selected through Draw of Lots
-        </div>
-
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>S.No</th>
-                        <th>Designation</th>
-                        <th>Name</th>
-                        <th>Particulars</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Chairperson</td>
-                        <td>Mrs. Madhuri Gupta</td>
-                        <td>Nominated by the Management of the School</td>
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>Secretary</td>
-                        <td>Mr. Kuldeep Gupta</td>
-                        <td>Principal of the School</td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
-                        <td>Parents Member</td>
-                        <td>Praveen Kumar</td>
-                        <td>Father of Bhumi, Class – II, Adm. No. 20/2023</td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>Parents Member</td>
-                        <td>Mamta Sharma</td>
-                        <td>Mother of Akash Sharma, Class – III, Adm. No. - 68/2025</td>
-                    </tr>
-
-                    <tr>
-                        <td>5</td>
-                        <td>Parents Member</td>
-                        <td>Mukesh Kr. Jha</td>
-                        <td>Father of Manish Kumar, Class – VIII, Adm. No. - 62/2022</td>
-                    </tr>
-
-                    <tr>
-                        <td>6</td>
-                        <td>Parents Member</td>
-                        <td>Sumit</td>
-                        <td>Father of Chayan, Class – II, Adm. No. - 19/2023</td>
-                    </tr>
-
-                    <tr>
-                        <td>7</td>
-                        <td>Parents Member</td>
-                        <td>Pooja</td>
-                        <td>
-                            Mother of Sarthak, Class – III, Adm. No. 64/2023,
-                            Belongs to SC Category
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>8</td>
-                        <td>Teacher Member</td>
-                        <td>Mrs. Priyanka Singh</td>
-                        <td>Teacher</td>
-                    </tr>
-
-                    <tr>
-                        <td>9</td>
-                        <td>Teacher Member</td>
-                        <td>Mrs. Neha Sharma</td>
-                        <td>Teacher</td>
-                    </tr>
-
-                    <tr>
-                        <td>10</td>
-                        <td>Teacher Member</td>
-                        <td>Mrs. Poonam</td>
-                        <td>Teacher</td>
-                    </tr>
-
-                    <tr>
-                        <td>11</td>
-                        <td>Observer</td>
-                        <td>Mrs. Payal Jain</td>
-                        <td>DE Nominee of the School / HOS GGSSS – Ujwa</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="section-title">
-            Reserve Parents Selected through Draw of Lots
-        </div>
-
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>S.No</th>
-                        <th>Name</th>
-                        <th>Father/Mother/Guardian</th>
-                        <th>Student Name</th>
-                        <th>Class</th>
-                        <th>Admin. No.</th>
-                        <th>Category</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Aarti</td>
-                        <td>Mother</td>
-                        <td>Poorvi</td>
-                        <td>IV</td>
-                        <td>10/2022</td>
-                        <td>Gen.</td>
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>Alka Sharma</td>
-                        <td>Mother</td>
-                        <td>Harshita</td>
-                        <td>V</td>
-                        <td>52/2022</td>
-                        <td>Gen.</td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
-                        <td>Tarawati</td>
-                        <td>Mother</td>
-                        <td>Mayank</td>
-                        <td>VII</td>
-                        <td>22/2024</td>
-                        <td>Gen.</td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>Ruksar</td>
-                        <td>Mother</td>
-                        <td>Aaliya</td>
-                        <td>IV</td>
-                        <td>38/2021</td>
-                        <td>Gen.</td>
-                    </tr>
-
-                    <tr>
-                        <td>5</td>
-                        <td>Paraveen Khatoon</td>
-                        <td>Mother</td>
-                        <td>Falak Khatoon</td>
-                        <td>Nur</td>
-                        <td>99/2026</td>
-                        <td>Gen.</td>
-                    </tr>
-
-                    <tr>
-                        <td>6</td>
-                        <td>Anjali Devi</td>
-                        <td>Mother</td>
-                        <td>Sanvi Kumari</td>
-                        <td>KG</td>
-                        <td>03/2026</td>
-                        <td>Gen.</td>
-                    </tr>
-
-                    <tr>
-                        <td>7</td>
-                        <td>Rabia</td>
-                        <td>Mother</td>
-                        <td>Ariful Islam</td>
-                        <td>Nur</td>
-                        <td>100/2026</td>
-                        <td>Gen.</td>
-                    </tr>
-
-                    <tr>
-                        <td>8</td>
-                        <td>Sarjeet</td>
-                        <td>Father</td>
-                        <td>Ashu</td>
-                        <td>III</td>
-                        <td>106/2026</td>
-                        <td>Gen.</td>
-                    </tr>
-
-                    <tr>
-                        <td>9</td>
-                        <td>Kapil</td>
-                        <td>Father</td>
-                        <td>Mayank</td>
-                        <td>VI</td>
-                        <td>80/2022</td>
-                        <td>OBC</td>
-                    </tr>
-
-                    <tr>
-                        <td>10</td>
-                        <td>Divya</td>
-                        <td>Mother</td>
-                        <td>Lakshay</td>
-                        <td>IV</td>
-                        <td>31/2023</td>
-                        <td>SC</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
 
     </div>
+
+
+    <!-- LANGUAGE DIVIDER -->
+
+    <hr class="language-divider">
+
+
+    <!-- HINDI NOTICE -->
+
+    <div class="hindi-section">
+
+      <div class="notice-label">
+        सूचना
+      </div>
+
+      <div class="notice-title">
+        शैक्षणिक सत्र 2026-27, 2027-28 एवं 2028-29 की अनुमोदित शुल्क संरचना
+      </div>
+
+      <div class="hindi-content">
+
+        <p class="salutation">
+          प्रिय अभिभावकगण,
+        </p>
+
+        <p>
+          सभी अभिभावकों को सूचित किया जाता है कि स्कूल लेवल फीस रेगुलेशन कमेटी (SLFRC), 2026-27 द्वारा विद्यालय के तीन शैक्षणिक सत्रों अर्थात् 2026-27, 2027-28 एवं 2028-29 की शुल्क संरचना को विधिवत अनुमोदित कर दिया गया है।
+        </p>
+
+        <p>
+          शैक्षणिक सत्र 2026-27 में विद्यालय की फीस में कोई वृद्धि नहीं की गई है। सत्र 2025-26 में लागू शुल्क संरचना ही सत्र 2026-27 में भी लागू रहेगी।
+        </p>
+
+        <p>
+          शैक्षणिक सत्र 2027-28 एवं 2028-29 की शुल्क संरचना को भी SLFRC द्वारा विधिवत अनुमोदित कर दिया गया है।
+        </p>
+
+        <p>
+          शैक्षणिक सत्र 2027-28 से Sports Fee (खेल शुल्क) प्रारंभ किया जा रहा है, जो अनुमोदित शुल्क संरचना का हिस्सा है।
+        </p>
+
+        <p>
+          शैक्षणिक सत्र 2027-28 से वर्तमान “Smart Class Fee” को पुनर्गठित कर “Smart Class &amp; Computer Fee” किया गया है, ताकि स्मार्ट क्लास एवं कंप्यूटर शिक्षा से संबंधित व्यय को वहन किया जा सके।
+        </p>
+
+        <p>
+          शैक्षणिक सत्र 2027-28 एवं 2028-29 की विस्तृत अनुमोदित शुल्क संरचना इस सूचना के साथ संलग्न है।
+        </p>
+
+        <p>
+          सभी अभिभावकों से अनुरोध है कि कृपया अनुमोदित शुल्क संरचना को देख लें।
+        </p>
+
+        <div class="signature">
+          प्रधानाचार्य<br>
+          रामा पब्लिक स्कूल
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </body>
 </html>
